@@ -1,3 +1,15 @@
+:root {
+    --primary-color: #ff6f61;
+    --primary-hover: #ff8a80;
+    --secondary-color: #ff3d71;
+    --secondary-hover: #ff5370;
+    --background-gradient: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    --text-color: #ffffff;
+    --button-padding: 15px 30px;
+    --button-radius: 10px;
+    --button-font-size: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +18,17 @@
 
 body {
     font-family: 'Dancing Script', cursive; /* Fonte romântica */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #ffafbd, #ffc3a0); /* Cores românticas no fundo */
+    background: var(--background-gradient); /* Cores românticas no fundo */
     overflow: hidden;
 }
 
@@ -21,42 +39,49 @@ body {
 h1 {
     margin-bottom: 30px;
     font-size: 2.5rem;
-    color: #ffffff;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 button {
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
     border: none;
-    border-radius: 10px;
+    border-radius: var(--button-radius);
     margin: 15px;
     cursor: pointer;
+    -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
+    font-weight: bold;
 }
 
 #sim {
-    background-color: #ff6f61;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 #sim:hover {
-    background-color: #ff8a80;
+    background-color: var(--primary-hover);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 #nao {
-    background-color: #ff3d71;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     position: absolute;
 }
 
 #nao:hover {
-    background-color: #ff5370;
+    background-color: var(--secondary-hover);
 }
 
 #floks-img {
     width: 200px;
     height: auto;
     margin-top: 20px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .hidden {
@@ -65,26 +90,39 @@ button {
 
 .visible {
     display: block;
+    -webkit-animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @media (max-width: 768px) {
+    :root {
+        --button-padding: 10px 20px;
+        --button-font-size: 16px;
+    }
+
     h1 {
         font-size: 1.8rem;
-    }
-    
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
+    :root {
+        --button-padding: 8px 16px;
+        --button-font-size: 14px;
+    }
+
     h1 {
         font-size: 1.5rem;
     }
-
-    button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
 }
+
