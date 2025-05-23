@@ -1,13 +1,5 @@
 # 💘 Pedido de Namoro Interativo
 
-<div align="center">
-  <img src="images/flork.png" alt="Flork" width="200"/>
-  
-  [![GitHub stars](https://img.shields.io/github/stars/4ndre-silva/pedido-namoro?style=social)](https://github.com/4ndre-silva/pedido-namoro/stargazers)
-  [![GitHub forks](https://img.shields.io/github/forks/4ndre-silva/pedido-namoro?style=social)](https://github.com/4ndre-silva/pedido-namoro/network/members)
-  [![GitHub license](https://img.shields.io/github/license/4ndre-silva/pedido-namoro)](https://github.com/4ndre-silva/pedido-namoro/blob/main/LICENSE)
-</div>
-
 ## 🌟 Sobre o Projeto
 
 Um pedido de namoro digital interativo e divertido! Este projeto web foi criado para tornar seu pedido de namoro mais especial e memorável. Com um design romântico e elementos interativos, você pode surpreender aquela pessoa especial de uma forma única e criativa.
@@ -65,12 +57,6 @@ Personalize as cores e estilos editando as variáveis CSS em `style.css`:
     --text-color: #ffffff;
 }
 ```
-
-### Imagens
-
-- Substitua `images/amar.png` para alterar o padrão de corações
-- Substitua `images/flork.png` para alterar a imagem principal
-
 ### Textos
 
 Edite os textos no arquivo `index.html`:
